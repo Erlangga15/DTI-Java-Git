@@ -1,4 +1,4 @@
-package com.erlangga.exercise;
+package com.erlangga.day1.exercise;
 
 public class App {
     public static void main(String[] args) {

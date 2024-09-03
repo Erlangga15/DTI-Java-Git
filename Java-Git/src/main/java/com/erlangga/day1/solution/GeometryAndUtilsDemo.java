@@ -1,4 +1,4 @@
-package com.erlangga.solution;
+package com.erlangga.day1.solution;
 
 import java.time.LocalDate;
 import java.util.Scanner;

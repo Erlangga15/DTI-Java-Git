@@ -1,4 +1,4 @@
-package com.erlangga.solution;
+package com.erlangga.day1.solution;
 
 public class NameInitials {
 	public static String getInitials(String fullName) {

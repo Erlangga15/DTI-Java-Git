@@ -1,4 +1,4 @@
-package com.erlangga.solution;
+package com.erlangga.day1.solution;
 
 public class Triangle {
 	public static double calculateThirdAngle(double angle1, double angle2) {

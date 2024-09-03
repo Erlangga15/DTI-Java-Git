@@ -1,4 +1,4 @@
-package com.erlangga.exercise;
+package com.erlangga.day1.exercise;
 
 import java.util.Scanner;
 
