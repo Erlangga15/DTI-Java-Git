@@ -1,7 +1,11 @@
 package com.erlangga;
 
+import com.erlangga.solution.GeometryAndUtilsDemo;
+import com.erlangga.exercise.App;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello, World!");
+        GeometryAndUtilsDemo.runExercises();
+        App.main(args);
     }
 }
