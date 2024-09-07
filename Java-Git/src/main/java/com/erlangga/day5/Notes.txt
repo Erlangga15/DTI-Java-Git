@@ -1,0 +1,62 @@
+WordGuessingGame
+
+• This program is a Word Guessing Game where the player tries to guess a hidden word letter by letter.
+• The main components of the game are:
+A list of words to choose from
+A randomly selected word for each game
+A hidden version of the word (displayed as underscores)
+A maximum number of attempts allowed
+A way to track the player's guesses and update the game state
+• Here's how the game works, step by step:
+Game Setup:
+The game starts by selecting a random word from a predefined list.
+It creates a hidden version of the word, replacing each letter with an underscore.
+The maximum number of attempts is set to 5.
+Game Loop:
+The game enters a loop that continues until the player wins or runs out of attempts.
+In each round, the game:
+a. Displays the current state (hidden word and attempts left)
+b. Asks the player to guess a letter
+c. Checks if the guessed letter is in the word
+d. Updates the game state accordingly
+Guessing Process:
+If the guessed letter is correct:
+The hidden word is updated to reveal the correctly guessed letter(s)
+The player doesn't lose an attempt
+If the guessed letter is incorrect:
+The number of attempts is reduced by 1
+Winning and Losing:
+The player wins if they guess all the letters correctly before running out of attempts
+The player loses if they run out of attempts before guessing the word
+
+• Key Methods and Their Purposes:
+1. selectRandomWord():
+Chooses a random word from the predefined list
+Uses Random class to generate a random index
+hideWord(String word):
+Creates the initial hidden version of the word (all underscores)
+Uses StringBuilder for efficient string manipulation
+3. getPlayerGuess():
+Prompts the player to enter a letter and reads their input
+isGuessCorrect(String word, char guess):
+Checks if the guessed letter is in the word
+Uses indexOf() method, which returns -1 if the letter is not found
+5. updateHiddenWord(String hiddenWord, char guess):
+Reveals the correctly guessed letter(s) in the hidden word
+Uses StringBuilder to efficiently update the hidden word
+displayGameStatus(String wordToGuess, String hiddenWord, int attemptsLeft):
+Shows the current state of the game to the player
+isGameWon():
+Checks if the player has guessed the entire word
+Compares the hidden word with the actual word
+
+• The game uses simple but effective methods to manage the game state and provide an interactive experience for the player. It demonstrates basic concepts like loops, conditionals, string manipulation, and random number generation in a practical and engaging way.
+
+----------------------------------------------------------------------------------------------------
+
+Currency Converter
+
+• This program is a simple currency converter that allows the user to convert an amount from one currency to another.
+• The main components of the program are:
+A list of exchange rates for different currencies
+A method to convert an amount from one currency to another
