@@ -6,7 +6,8 @@ package com.erlangga;
 // import com.erlangga.day3.exercise.Exercise3Demo;
 // import com.erlangga.day4.Exercise4Demo;
 // import com.erlangga.day5.Exercise5Demo;
-import com.erlangga.day6.Exercise6Demo;
+// import com.erlangga.day6.Exercise6Demo;
+import com.erlangga.day7.Exercises7Demo;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,6 +17,7 @@ public class Main {
         // Exercise3Demo.runExercises();
         // Exercise4Demo.runExercises();
         // Exercise5Demo.runExercises();
-        Exercise6Demo.runExercises();
+        // Exercise6Demo.runExercises();
+        Exercises7Demo.runExercises();
     }
 }
