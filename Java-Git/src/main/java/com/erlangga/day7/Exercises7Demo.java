@@ -25,7 +25,7 @@ public class Exercises7Demo {
 				calculateAverageOfArray.printCalculateAverage();
 				break;
 			case 2:
-				FileHandling.readFromFile("D:\\DTI-Bootcamp\\Java-Git\\Java-Git\\src\\main\\resources\\product_sales_data.csv");
+				FileHandling.readFromFile("D:\\DTI-Bootcamp\\Java-Git\\Java-Git\\src\\main\\resources\\20_product_sales_data.csv");
 				break;
 			default:
 				System.out.println("Not valid choice.");

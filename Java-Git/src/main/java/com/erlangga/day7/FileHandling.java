@@ -8,6 +8,7 @@ import java.math.BigDecimal;
 
 import com.erlangga.day7.exceptions.FileInvalidPathExeception;
 import com.erlangga.day7.exceptions.FileInvalidTypeTotalAndPrice;
+import com.erlangga.day7.exceptions.FileInvalidColoumnData;
 
 public class FileHandling {
 	private static ArrayList<String> dataCSV = new ArrayList<>();
@@ -45,11 +46,12 @@ public class FileHandling {
 		try {
 			for (int i = 1; i < dataCSV.size(); i++) {
 				String[] dataArray = dataCSV.get(i).split(",");
-				if (dataArray.length < 3) {
-					throw new FileInvalidTypeTotalAndPrice("Row " + i + " does not have enough columns");
+				System.out.println("dataArray: " + dataArray.length);
+				if (dataArray.length < 3 || dataArray.length > 3) {
+					throw new FileInvalidColoumnData("Row " + i + " does not have enough columns or more than 3 columns");
 				}
-				int quantity = parseInteger(dataArray[1], i);
-				BigDecimal price = parseBigDecimal(dataArray[2], i);
+					int quantity = parseInteger(dataArray[1], i);
+					BigDecimal price = parseBigDecimal(dataArray[2], i);
 				totalSales = totalSales.add(price.multiply(BigDecimal.valueOf(quantity)));
 			}
 		} finally {
@@ -63,8 +65,8 @@ public class FileHandling {
 		try {
 			for (int i = 1; i < dataCSV.size(); i++) {
 				String[] dataArray = dataCSV.get(i).split(",");
-				if (dataArray.length < 2) {
-					throw new FileInvalidTypeTotalAndPrice("Row " + i + " does not have enough columns");
+				if (dataArray.length < 2 || dataArray.length > 2) {
+					throw new FileInvalidColoumnData("Row " + i + " does not have enough columns or more than 2 columns");
 				}
 				totalProductSold += parseInteger(dataArray[1], i);
 			}
@@ -80,8 +82,8 @@ public class FileHandling {
 		try {
 			for (int i = 1; i < dataCSV.size(); i++) {
 				String[] dataArray = dataCSV.get(i).split(",");
-				if (dataArray.length < 2) {
-					throw new FileInvalidTypeTotalAndPrice("Row " + i + " does not have enough columns");
+				if (dataArray.length < 2 || dataArray.length > 2) {
+					throw new FileInvalidColoumnData("Row " + i + " does not have enough columns or more than 2 columns");
 				}
 				int quantity = parseInteger(dataArray[1], i);
 				if (quantity > mostBoughtQuantity) {
@@ -101,8 +103,8 @@ public class FileHandling {
 		try {
 			for (int i = 1; i < dataCSV.size(); i++) {
 				String[] dataArray = dataCSV.get(i).split(",");
-				if (dataArray.length < 2) {
-					throw new FileInvalidTypeTotalAndPrice("Row " + i + " does not have enough columns");
+				if (dataArray.length < 2 || dataArray.length > 2) {
+					throw new FileInvalidColoumnData("Row " + i + " does not have enough columns or more than 2 columns");
 				}
 				int quantity = parseInteger(dataArray[1], i);
 				if (quantity < leastBoughtQuantity) {
